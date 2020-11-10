@@ -183,49 +183,10 @@ def testing():
     exit()
 
 if __name__ == "__main__":
-
-    #testing()
-
-
-
-
-
     logging.basicConfig(filename='data_comparator.log',level=logging.INFO,format='%(asctime)s %(message)s')
     key_position  = 1
     config = read_configuration(configuration_file)
     
     previous_main()
 
-    
-
-
-
-
-
-    #source_file = 'Person_Health_local.csv'
-    #target_file = 'Person_Health_Baseline_local.csv'
-
-    # source_dd_df = api.get_dataframe2(source_file, ',', config.source_file_header)
-    # target_dd_df = api.get_dataframe2(target_file, ',', config.source_file_header)
-    # source_dd_df = source_dd_df.set_index("p_id")
-    # target_dd_df = target_dd_df.set_index("p_id")
-
-    # source_df = api.get_dataframe(source_file,',','YES')
-    # source_df = source_df.set_index("p_id").sort_index()
-
-    # target_df = api.get_dataframe(target_file,',','YES')
-    # target_df = target_df.set_index("p_id").sort_index()
-
-    
-    # s_columns = column_names(source_df)
-    # t_columns = column_names(target_df)
-
-    # print(s_columns)
-    # print(t_columns)
-
-    # print(source_df.memory_usage(index=True).sum()/1000000)
-    # print(target_df.memory_usage(index=True).sum()/1000000)
-
-    
-    # source_df.compare(target_df,keep_equal=True)
     logging.shutdown()
