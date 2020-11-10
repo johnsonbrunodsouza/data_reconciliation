@@ -1,0 +1,15 @@
+{
+    "operation": "Comparison",
+    "source_file": "./source_file.csv",
+    "target_file": "./target_file.csv",
+    "source_file_header": "Yes",
+    "target_file_header": "Yes",
+    "source_file_delimiter": ",",
+    "target_file_delimiter": ",",
+    "comparison_keys": [ ],
+    "ignore_keys": [],
+    "reconciliation_report":"reconciliation_report.csv",
+    "partition_files":false,
+    "file_partition_directory":".",
+    "reconciliation_output":"./"
+}
