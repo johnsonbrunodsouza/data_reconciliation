@@ -4,8 +4,6 @@ from dc import api
 from dc import Configuration
 import logging
 import copy
-from dask import delayed
-from dask import compute
 import pandas as pd
 import os
 
