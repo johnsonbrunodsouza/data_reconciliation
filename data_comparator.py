@@ -6,9 +6,8 @@ import logging
 import copy
 import pandas as pd
 import os
-
-### This should change to argv
-configuration_file = "configuration.json"
+from dask import delayed
+from dask import compute
 
 ### get configuration
 def read_configuration(conf_file):
@@ -183,7 +182,9 @@ def testing():
 if __name__ == "__main__":
     logging.basicConfig(filename='data_comparator.log',level=logging.INFO,format='%(asctime)s %(message)s')
     key_position  = 1
-    config = read_configuration(configuration_file)
+    #config = read_configuration(configuration_file)
+    print(sys.argv)
+    config = read_configuration(sys.argv[1])
     
     previous_main()
 
