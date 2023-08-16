@@ -1,0 +1,12 @@
+bigquery:
+  client_service_json: c:\NTTDATA\Deutche_Bank\hashmap_data_cataloger\hdc\visuals\bigquery-eval-hd1341-f4215fb67922.json_20230813203726478845
+  dataset: bigquery-eval-hd1341
+hive:
+  connectionurl: jdbc:mariadb://ec2-3-236-147-154.compute-1.amazonaws.com:3306/hive
+  database: hdm_test
+  driver:
+    name: org.mariadb.jdbc.Driver
+    path: C:/NTTDATA/Deutche_bank/mariadb-java-client-3.1.4.jar
+  password: ykwyyJNs6Y2pgiZm
+  protocol: jdbc
+  user: hive

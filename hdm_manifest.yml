@@ -1,0 +1,44 @@
+state_manager:
+  name: state_manager
+  type: SnowflakeStateManager
+  conf:
+    connection: state_manager
+
+source:
+  name: teradata_source
+  type: TeradataSource
+  conf:
+    env: teradata
+    consumersessions: 1
+    producersessions: 2
+    directorypath: C:/HDMTest
+    scenarios:
+      - table_name: hdc_test.structarray_table
+        encoding: ISO88591
+        location: hdfs:\\ip-172-31-70-212.ec2.internal:8020\user\hive\warehouse\hdc_test.db\structarray_table
+        compression: False
+        consumersessions: 1
+        producersessions: 1
+        shardsize: 500m
+        cdc:
+          mode: 
+          keytable: 
+            tablename: uat3_edw_ctl.tab_key
+            tablenamecolumn: TAB_NM
+            keycolumn: COL_NM
+        watermark:
+          column: LOAD_RUN_TS
+          offset: 
+        checksum:
+          function: 
+          column:                   
+sink:
+  name: sflk_copy_into_sink
+  type: SnowflakeS3CopySink
+  conf:
+    env: snowflake_knerrir_schema
+    source_env: s3
+    stage_name: TMP_KNERRIR_S3
+    file_format: csv
+    stage_directory: bcbsnc-nexgen-prod-staging-us-east-1
+    

@@ -1,0 +1,5 @@
+dev:
+  bigquery:
+    bucket_name: bq_to_sf_us_central1
+    service_json: C:/NTTDATA/Deutche_Bank/bigquery-eval-hd1341-f4215fb67922.json
+    storage_integration: gcs_int_us_central1

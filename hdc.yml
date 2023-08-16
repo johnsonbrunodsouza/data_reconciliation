@@ -1,0 +1,19 @@
+destinations:
+  bigquery:
+    conf:
+      profile: bigquery
+      type: BigQueryDAO
+    type: BigQueryCreator
+mappers:
+  hive:
+    bigquery:
+      conf:
+        recreate: true
+        report: false
+      type: HiveToBigQuery
+sources:
+  hive:
+    conf:
+      profile: hive
+      type: Hive
+    type: HiveCrawler
